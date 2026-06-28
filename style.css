@@ -344,3 +344,11 @@ section h2 { color: #B8974A; }
 .project-meta { color: #B8974A; }
 
 .skill-label { color: #B8974A; }
+.project-status {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #888;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+}
