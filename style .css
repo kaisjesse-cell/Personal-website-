@@ -1,0 +1,346 @@
+/* ── RESET ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── FADE IN ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+section.fade-in:nth-of-type(1) { animation-delay: 0.1s; }
+section.fade-in:nth-of-type(2) { animation-delay: 0.25s; }
+section.fade-in:nth-of-type(3) { animation-delay: 0.4s; }
+section.fade-in:nth-of-type(4) { animation-delay: 0.55s; }
+section.fade-in:nth-of-type(5) { animation-delay: 0.7s; }
+
+/* ── BASE ── */
+body {
+  background-color: #EFEFED;
+  color: #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  position: sticky;
+  top: 0;
+  background-color: #EFEFED;
+  z-index: 100;
+  border-bottom: 1px solid #D8D8D4;
+}
+
+nav img.nav-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  flex-shrink: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+nav ul li a {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover { color: #0A0A0A; }
+
+/* ── STATUS ── */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.status-text {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* ── HERO ── */
+#hero {
+  padding: 120px 64px 100px;
+  max-width: 860px;
+}
+
+.hero-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #AAAAAA;
+  margin-bottom: 28px;
+}
+
+#hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 88px;
+  font-weight: 300;
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 40px;
+}
+
+#hero p {
+  font-size: 16px;
+  color: #666;
+  font-weight: 300;
+  line-height: 1.9;
+  max-width: 400px;
+  margin-bottom: 40px;
+}
+
+/* ── SHARED SECTION ── */
+section {
+  padding: 100px 64px;
+  border-top: 1px solid #D8D8D4;
+}
+
+section h2 {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #AAAAAA;
+  margin-bottom: 56px;
+  font-weight: 500;
+}
+
+/* ── ABOUT ── */
+#about p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  max-width: 600px;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* ── SKILLS ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 64px;
+  max-width: 640px;
+}
+
+.skill-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #AAAAAA;
+  margin-bottom: 12px;
+}
+
+.skill-group p {
+  font-size: 14px;
+  color: #444;
+  line-height: 2;
+  font-weight: 300;
+}
+
+/* ── PROJECTS ── */
+#projects {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.project {
+  padding: 48px 0;
+  border-bottom: 1px solid #D8D8D4;
+  transition: opacity 0.3s ease;
+}
+
+.project:first-of-type { border-top: 1px solid #D8D8D4; }
+.project:hover { opacity: 0.6; }
+
+.project-meta {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #AAAAAA;
+  margin-bottom: 12px;
+}
+
+.project h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.project p {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 24px;
+  max-width: 440px;
+  line-height: 1.8;
+}
+
+.project-link {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #0A0A0A;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.project-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 1px;
+  background: #0A0A0A;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+/* ── CONTACT ── */
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-link {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #0A0A0A;
+  margin-bottom: 16px;
+  position: relative;
+  width: fit-content;
+  padding-bottom: 4px;
+}
+
+.contact-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0;
+  height: 1px;
+  background: #0A0A0A;
+  transition: width 0.3s ease;
+}
+
+.contact-link:hover::after { width: 100%; }
+
+/* ── FOOTER ── */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 64px;
+  border-top: 1px solid #D8D8D4;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #AAAAAA;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 600px) {
+  nav { padding: 20px 24px; }
+  nav ul { gap: 16px; }
+  nav ul li a { font-size: 9px; letter-spacing: 1.5px; }
+  .status-text { display: none; }
+
+  #hero { padding: 60px 24px 80px; }
+  #hero h1 { font-size: 52px; letter-spacing: -1px; }
+
+  section { padding: 72px 24px; }
+
+  #projects {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .project h3 { font-size: 38px; }
+  .contact-link { font-size: 24px; }
+
+  footer {
+    padding: 28px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  }
+/* ── GOLD ACCENTS ── */
+nav ul li a:hover { color: #B8974A; }
+
+.status-dot { background-color: #B8974A; }
+
+.hero-label { color: #B8974A; }
+
+.project-link { color: #B8974A; }
+.project-link::after { background: #B8974A; }
+
+.contact-link::after { background: #B8974A; }
+
+section h2 { color: #B8974A; }
+
+.project-meta { color: #B8974A; }
+
+.skill-label { color: #B8974A; }
